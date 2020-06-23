@@ -1,5 +1,5 @@
 {
-  "name": "unTappd",
+  "name": "untappd",
   "private": true,
   "dependencies": {
     "@babel/core": "^7.10.2",
@@ -29,5 +29,6 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {}
 }
