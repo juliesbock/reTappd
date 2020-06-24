@@ -1,6 +1,6 @@
 import LoginForm from './login';
 import { connect } from 'react-redux';
-import { login, clearErrors } from '../../actions/session_actions';
+import { clearErrors } from '../../actions/session_actions';
 import { login } from '../../util/session_api_util';
 
 
