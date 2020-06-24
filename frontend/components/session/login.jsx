@@ -65,7 +65,7 @@ class LoginForm extends React.Component {
                   onChange={this.handleInput('username')}/>
               </label>
               <label>
-                <i class="fas fa-user"></i>
+                <i class="fas fa-lock"></i>
                 <input type="text"
                   placeholder="Password"
                   value={this.setState.password}
