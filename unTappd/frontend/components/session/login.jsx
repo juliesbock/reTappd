@@ -48,23 +48,34 @@ class LoginForm extends React.Component {
 
   render() {
     return(
-      <div className="login-form">
-        <h1>reTappd Logo</h1>
-        <h3>Login</h3>
-        <form>
-          {/* <ul>{this.props.errors.session}</ul> */}
-          <label>Username:
-            <input type="text" 
-              value={this.setState.username}
-              onChange={this.handleInput('username')}/>
-          </label>
-          <label>Password:
-            <input type="text"
-              value={this.setState.password}
-              onChange={this.handleInput('password')} />
-          </label>
-          <button onClick={this.handleSubmit}>Log In!</button>
-        </form>
+      <div className='login-background'>
+        <div className='login-wrapper'>
+          <div className="login-form">
+            <div className="logo">
+              <h1>reTappd Logo</h1>
+              <h3>Drink Socially</h3>
+            </div>
+            <form>
+              <button className='demo-button'>Demo User</button>
+              <label>
+                <i class="fas fa-user"></i>
+                <input type="text" 
+                  placeholder="Username"
+                  value={this.setState.username}
+                  onChange={this.handleInput('username')}/>
+              </label>
+              <label>
+                <i class="fas fa-user"></i>
+                <input type="text"
+                  placeholder="Password"
+                  value={this.setState.password}
+                  onChange={this.handleInput('password')} />
+              </label>
+              <button className='signin-button' onClick={this.handleSubmit}>Sign In</button>
+              <p>New around here? <a href="/login">Sign up!</a></p>
+            </form>
+          </div>
+        </div>
       </div>
     )
   }
