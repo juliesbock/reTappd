@@ -21,7 +21,8 @@ class LoginForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.processForm(this.state);
+    this.props.submitLogin(this.state)
+      .then(() => this.props.history.push('/'));
   }
 
   // demoUser(e) {
@@ -51,6 +52,7 @@ class LoginForm extends React.Component {
         <h1>reTappd Logo</h1>
         <h3>Login</h3>
         <form>
+          {/* <ul>{this.props.errors.session}</ul> */}
           <label>Username:
             <input type="text" 
               value={this.setState.username}
@@ -66,7 +68,6 @@ class LoginForm extends React.Component {
       </div>
     )
   }
-
 };
 
 export default LoginForm;

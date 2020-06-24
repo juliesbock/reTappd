@@ -9,8 +9,7 @@ class Api::SessionsController < ApplicationController
       login(@user)
       render :show
     else
-      flash.now[errors] = @user.errors.full_messages
-      render :show
+      render json: ['Invalid user/password combination'], status: 401
     end
   end
 
@@ -19,7 +18,7 @@ class Api::SessionsController < ApplicationController
       logout
       render json: '{}', status: 200
     else
-      render json: 'not logged in', status: 404
+      render json: ['not logged in'], status: 404
     end
   end
   

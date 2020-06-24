@@ -8,17 +8,16 @@ const receiveCurrentUser = (user) => ({
   user
 })
 
-const receiveErrors = (errors) => ({
-  type: RECEIVE_ERRORS,
-  errors
-})
-
 const logoutCurrentUser = () => ({
   type: LOGOUT_CURRENT_USER,
 })
 
+export const receiveErrors = (errors) => ({
+  type: RECEIVE_ERRORS,
+  errors
+})
+
 export const signup = (user) => dispatch => {
-  debugger
   return(APIUtil.signup(user)  
     .then((userRes) => (dispatch(receiveCurrentUser(userRes))))
     .fail((errors) => dispatch(receiveErrors(errors.responseJSON)))

@@ -9,7 +9,6 @@ const App = () => (
   <div>
     <header>
       <h1>reTappd</h1>
-      hello
       <Route path="/signup" component={SignupContainer} />
       <Route path="/login" component={LoginContainer} />
     </header>

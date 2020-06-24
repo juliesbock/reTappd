@@ -21,14 +21,14 @@ class SignupForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.processForm(this.state);
+    this.props.submitSignup(this.state);
   }
 
   render() {
     return (
       <div className="signin-form">
         <h1>reTappd Logo</h1>
-        <h3>Signin</h3>
+        <h3>Create an Account!</h3>
         <form>
           <label>Username:
             <input type="text"
@@ -40,7 +40,7 @@ class SignupForm extends React.Component {
               value={this.setState.password}
               onChange={this.handleInput('password')} />
           </label>
-          <button onClick={this.handleSubmit}>Log In!</button>
+          <button onClick={this.handleSubmit}>Sign Up!</button>
         </form>
       </div>
     )
