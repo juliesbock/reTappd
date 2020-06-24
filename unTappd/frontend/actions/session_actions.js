@@ -17,18 +17,18 @@ const logoutCurrentUser = () => ({
   type: LOGOUT_CURRENT_USER,
 })
 
-export const signup = (user) => dispatch => (
-  APIUtil.signup(user)
+export const signup = (user) => dispatch => {
+  debugger
+  return(APIUtil.signup(user)  
     .then((userRes) => (dispatch(receiveCurrentUser(userRes))))
     .fail((errors) => dispatch(receiveErrors(errors.responseJSON)))
-);
+)};
 
 export const login = (user) => dispatch => (
   APIUtil.login(user).
     then((userRes) => (dispatch(receiveCurrentUser(userRes))))
     .fail((errors) => dispatch(receiveErrors(errors.responseJSON)))
 );
-
 
 export const logout = () => dispatch => (
   APIUtil.logout()

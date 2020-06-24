@@ -9,11 +9,15 @@ class ApplicationController < ActionController::Base
   end
 
   def require_logged_in
-    render json: 'not logged in', status: 403
+    unless current_user
+      render json: 'not logged in', status: 403
+    end
   end
 
   def login(user)
+    user.reset_session_token!
     session[:session_token] = user.session_token
+    @current_user = user
   end
 
   def logout

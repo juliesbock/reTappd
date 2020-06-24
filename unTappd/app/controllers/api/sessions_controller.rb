@@ -13,4 +13,14 @@ class Api::SessionsController < ApplicationController
       render :show
     end
   end
+
+  def destroy
+    if logged_in? 
+      logout
+      render json: '{}', status: 200
+    else
+      render json: 'not logged in', status: 404
+    end
+  end
+  
 end
