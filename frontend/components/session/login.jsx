@@ -10,6 +10,7 @@ class LoginForm extends React.Component {
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.demoUser = this.demoUser.bind(this);
     // this.demoUser = this.demoUser.bind(this);
   }
 
@@ -25,26 +26,29 @@ class LoginForm extends React.Component {
       .then(() => this.props.history.push('/'));
   }
 
-  // demoUser(e) {
-  //   e.preventDefault();
+  demoUser(e) {
+    e.preventDefault();
 
-  //   const demoUser = {
-  //     username: "DemoUser",
-  //     password: "password"
-  //   }
+    const demoUser = {
+      username: "DemoUser",
+      password: "123456"
+    }
 
-  //   if (this.state.username !== demoUser.username) {
-  //     const inputUsername = setInterval(() => {
-  //       if (this.state.username !== demoUser.username) {
-  //         const temp = demoUser.username.slice(0, this.state.username.length + 1);
-  //         this.setState({ username: temp });
-  //       } else {
-  //         clearInterval(inputUsername);
-  //         animatePassword();
-  //       }
-  //     }, speed);
-  //   }
-  // }
+    this.props.submitLogin(this.state)
+      .then(() => this.props.history.push('/'));
+
+    // if (this.state.username !== demoUser.username) {
+    //   const inputUsername = setInterval(() => {
+    //     if (this.state.username !== demoUser.username) {
+    //       const temp = demoUser.username.slice(0, this.state.username.length + 1);
+    //       this.setState({ username: temp });
+    //     } else {
+    //       clearInterval(inputUsername);
+    //       animatePassword();
+    //     }
+    //   }, speed);
+    // }
+  }
 
   render() {
     return(
@@ -52,34 +56,30 @@ class LoginForm extends React.Component {
         <div className='login-wrapper'>
           <div className="login-form">
             <div className="logo">
-              <h1>reTappd Logo</h1>
-              <h3>Drink Socially</h3>
+              <img src="https://cdn.iconscout.com/icon/free/png-256/beer-69-129873.png" alt="Beer Icon" width="50"></img>
+              <h3 className="subheader">Drink Socially</h3>
             </div>
+            <button className='demo-button' onClick={this.demoUser}>Demo User</button>
             <form>
-              <button className='demo-button'>Demo User</button>
-                <br /><br />
               <label className="input-text">
-                <i class="fas fa-user"></i> 
+                <i className="fa fa-user"> </i> 
                 <input type="text" 
-                  className="input-text"
                   placeholder="Username"
                   value={this.setState.username}
                   onChange={this.handleInput('username')}/>
-              </label>
-              <br />
-              <br />
+              </label> <br/>
               <label className="input-text">
-                <i class="fas fa-lock"></i> 
+                <i className="fa fa-lock"> </i> 
                 <input type="text"
                   placeholder="Password"
                   value={this.setState.password}
                   onChange={this.handleInput('password')} />
-              </label>
-              <br /><br />
+              </label><br/>
               <button className='signin-button' onClick={this.handleSubmit}>Sign In</button>
-              <br />
-              <p>New around here? <a href="/login">Sign up!</a></p>
             </form>
+            <div >
+              <p className='new-here'>New around here? &ensp; <a href="/login">Sign up!</a></p>
+            </div>
           </div>
         </div>
       </div>
