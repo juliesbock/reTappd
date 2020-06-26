@@ -69,34 +69,34 @@ class LoginForm extends React.Component {
 
   render() {
     return(
-      <div className='background-wrapper'>
-        <div className="login-form">
-          <div className="logo">
-            <img src="https://cdn.iconscout.com/icon/free/png-256/beer-69-129873.png" alt="Beer Icon" width="50"></img>
-            <h3 className="subheader">Drink Socially</h3>
+      <div className='sessions-frame'>
+          <div className="login-form">
+            <div className="logo">
+              <img src="https://cdn.iconscout.com/icon/free/png-256/beer-69-129873.png" alt="Beer Icon" width="50"></img>
+              <h3 className="subheader">Drink Socially</h3>
+            </div>
+            <button className='demo-button' onClick={this.demoUser}>Demo User</button>
+            <form>
+              <label className="input-text">
+                <i className="fa fa-user"> </i> 
+                <input type="text" 
+                  placeholder="Username"
+                  value={this.state.username}
+                  onChange={this.handleInput('username')}/>
+              </label> <br/>
+              <label className="input-text">
+                <i className="fa fa-lock"> </i> 
+                <input type="password"
+                  placeholder="Password"
+                  value={this.state.password}
+                  onChange={this.handleInput('password')} />
+              </label><br/>
+              <button className='signin-button' onClick={this.handleSubmit}>Sign In</button>
+            </form>
+            <div >
+              <p className='new-here'>New around here? &thinsp; <a href="/#/signup">Sign up!</a></p>
+            </div>
           </div>
-          <button className='demo-button' onClick={this.demoUser}>Demo User</button>
-          <form>
-            <label className="input-text">
-              <i className="fa fa-user"> </i> 
-              <input type="text" 
-                placeholder="Username"
-                value={this.state.username}
-                onChange={this.handleInput('username')}/>
-            </label> <br/>
-            <label className="input-text">
-              <i className="fa fa-lock"> </i> 
-              <input type="password"
-                placeholder="Password"
-                value={this.state.password}
-                onChange={this.handleInput('password')} />
-            </label><br/>
-            <button className='signin-button' onClick={this.handleSubmit}>Sign In</button>
-          </form>
-          <div >
-            <p className='new-here'>New around here? &thinsp; <a href="/#/signup">Sign up!</a></p>
-          </div>
-        </div>
       </div>
     )
   }

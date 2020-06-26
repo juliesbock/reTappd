@@ -5,7 +5,7 @@ class User < ApplicationRecord
   validates :username, :password_digest, :session_token, presence: true
   validates :username, :session_token, uniqueness: true
   validates :password, presence: { message: "Please enter a password." }, 
-    length: { minimum: 8,
+    length: { minimum: 6,
       message: "Please choose a password with at least 6 characters."}, 
       allow_nil: true
 

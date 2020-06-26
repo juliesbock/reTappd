@@ -1,0 +1,40 @@
+.login-signup-upper{
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  margin: 20px;
+}
+
+.login-signup-upper{
+  // position: fixed;
+  // display: inline-flex;
+  display: flex;
+  flex-direction: row;
+}
+
+.splash-right{
+  display: inline-flex;
+}
+
+.splash-btn {
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 4px;
+  color: #fff;
+  margin: 0 0 1rem;
+  margin-right: 15px;
+  padding: 15px 20px;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 1em;
+  min-width: 100px;
+  height: 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.splash-btn:hover {
+  background-color: #fff;
+  font-weight: 600;
+  color: #000;
+}

@@ -8,8 +8,11 @@ class Splash extends React.Component {
     return (
       <div className="splash-main">
         <div className="login-signup-upper">
-          <Link to="/login" className="splash-btn">Sign In</Link> <br/>
-          <Link to="/signup" className="splash-btn">Create an Account</Link>
+          <div className="splash-left"></div>
+          <div className="splash-right">
+            <Link to="/login" className="splash-btn">Sign In</Link> <br />
+            <Link to="/signup" className="splash-btn">Create an Account</Link>
+          </div>
         </div>
         {/* will put rest of splash page contents */}
       </div>

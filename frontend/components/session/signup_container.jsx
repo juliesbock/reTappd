@@ -9,7 +9,7 @@ const mSTP = state => ({
 
 const mDTP = dispatch => ({
   submitSignup: formUser => dispatch(signup(formUser)),
-  errors: (errors) => dispatch(receiveErrors(errors))
+  // fetchErrors: (errors) => dispatch(receiveErrors(errors))
 });
 
 export default connect(mSTP, mDTP)(SignupForm);
