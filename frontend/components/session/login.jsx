@@ -11,7 +11,6 @@ class LoginForm extends React.Component {
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.demoUser = this.demoUser.bind(this);
-    // this.demoUser = this.demoUser.bind(this);
   }
 
   handleInput(field) {
@@ -95,7 +94,7 @@ class LoginForm extends React.Component {
             <button className='signin-button' onClick={this.handleSubmit}>Sign In</button>
           </form>
           <div >
-            <p className='new-here'>New around here? &ensp; <a href="/login">Sign up!</a></p>
+            <p className='new-here'>New around here? &thinsp; <a href="/#/signup">Sign up!</a></p>
           </div>
         </div>
       </div>

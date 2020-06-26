@@ -11,7 +11,7 @@ class Splash extends React.Component {
           <Link to="/login" className="splash-btn">Sign In</Link> <br/>
           <Link to="/signup" className="splash-btn">Create an Account</Link>
         </div>
-        {/* <LoginFormContainer /> */}
+        {/* will put rest of splash page contents */}
       </div>
     )
   }

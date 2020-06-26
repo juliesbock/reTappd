@@ -14,7 +14,6 @@
   width: 100%;
   min-height: 100%;
   max-height: 100%;
-
   box-sizing: border-box;
   display: flex;
   position: fixed;
@@ -38,6 +37,40 @@
   background: #ffffff;
 }
 
+.signin-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 24px 20px;
+  width: 300px;
+  height: 400px;
+  border: 2px solid gray;
+  text-align: center;
+  background: #ffffff;
+}
+
+.brewery-box{
+  background-color: #ffa;
+  margin-top: 15px;
+  padding: 0 5px;
+  width: 240px;
+}
+
+.sign-up-form{
+  height: 180px;
+  width: 240px;
+}
+
+.fa {
+  line-height: 1.5;
+}
+.small-text{
+  font-size: 12px;
+  line-height: 1.1;
+  padding: 10px 0;
+}
+
 button{
   width: 240px;
   padding: 12px 0;
@@ -53,13 +86,21 @@ button{
 }
 
 .demo-button{
-  background-color: rgb(53, 77, 137);
+  background-color: #3B5998;
   color: #ffffff;
+}
+
+.demo-button:hover{
+  background-color: #2D4473;
 }
 
 .signin-button{
   color: #ffffff;
   background-color: #ffcc00
+}
+
+.signin-button:hover{
+  background-color: #D9AD00;
 }
 
 .input-text{
@@ -115,6 +156,10 @@ form{
 
 a {
   color: #c60;
+}
+
+a:hover{
+  color: #f93;
 }
 
 

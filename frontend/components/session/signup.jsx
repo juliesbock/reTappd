@@ -10,7 +10,6 @@ class SignupForm extends React.Component {
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
-    // this.demoUser = this.demoUser.bind(this);
   }
 
   handleInput(field) {
@@ -24,23 +23,35 @@ class SignupForm extends React.Component {
     this.props.submitSignup(this.state);
   }
 
+  showErrors(){
+    return (
+      this.props.errors.map((error, i) => 
+        <li key={`error-${i}`}>
+        {error}
+        </li>
+        )
+    )
+  }
+
   render() {
     return (
       <div className='background-wrapper'>
         <div className="signin-form">
-          <div className="logo">
-            <img src="https://cdn.iconscout.com/icon/free/png-256/beer-69-129873.png" alt="Beer Icon" width="50"></img>
-            <h3 className="subheader">Drink Socially</h3>
+          <div>
+            <div className="logo">
+              <img src="https://cdn.iconscout.com/icon/free/png-256/beer-69-129873.png" alt="Beer Icon" width="50"></img>
+              <h3 className="subheader">Drink Socially</h3>
+            </div>
+            <div className="brewery-box">
+              <p className="small-text">
+                Have an account? Want to login with a Demo Account?
+                &thinsp;
+                <a href="#/login">Login here.</a> 
+              </p>
+            </div>
+            <div></div>
           </div>
-          <div className="brewery-box">
-            <p>
-              Are you a brewery that's trying to get added to Untappd, 
-              claim and manage your brewery page, or access your brewery 
-              account? Check this out first: 
-              <a href="https://help.untappd.com/hc/en-us/articles/360034034712-Getting-on-Untappd-Brewery-Guide">Getting on Untappd: Brewery Guide</a> 
-            </p>
-          </div>
-          <form>
+          <form className="sign-up-form">
             <label className="input-text">
               <i className="fa fa-user"> </i>
               <input type="text"
@@ -55,10 +66,10 @@ class SignupForm extends React.Component {
                 value={this.state.password}
                 onChange={this.handleInput('password')} />
             </label>
-            <p className="">You must be of legal drinking age in your country to join 
-              Untappd. By clicking Create Account, you agree to our 
-              <a href="https://untappd.com/terms">Terms of Use</a>
-              and our <a href="https://untappd.com/privacy">Privacy Policy</a></p>
+            <p className="small-text">You must be of legal drinking age to join 
+            reTappd. By clicking Create Account, you agree to our &thinsp;
+              <a href="https://untappd.com/terms">Terms</a>&thinsp; and <a href="https://untappd.com/privacy">Policies</a>.</p>
+              <br/>
             <button className='signin-button' onClick={this.handleSubmit}>Create Account</button>
           </form>
         </div>
