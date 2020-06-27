@@ -4,6 +4,7 @@ import { AuthRoute, ProtectedRoute} from "../util/route_util"
 import SignupContainer from './session/signup_container';
 import LoginContainer from './session/login_container';
 import SplashPage from './splash_container'
+// import HomeHeader from './home_page'
 
 
 
@@ -14,6 +15,7 @@ const App = () => (
       <Switch>
         <AuthRoute path="/signup" component={SignupContainer} />
         <AuthRoute path="/login" component={LoginContainer} />
+        {/* <Route path="/home" component={HomeHeader} /> */}
         <Route path="/" component={SplashPage} />
       </Switch>
     </div>

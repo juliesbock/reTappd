@@ -29,13 +29,11 @@ class LoginForm extends React.Component {
     e.preventDefault();
 
     const demoUser = {
-      username: "julie",
-      password: "123456"
+      username: "DemoUser",
+      password: "password"
     }
 
     const speed = 100;
-    debugger
-    const that = this;
     // set state to be "" for pw and UN
 
     if (this.state.username !== demoUser.username) {
@@ -68,6 +66,11 @@ class LoginForm extends React.Component {
   }
 
   render() {
+
+    const errors = this.props.errors.map((error, i) => {
+      return (<div key={i}> {error} </div>)
+    })
+
     return(
       <div className='sessions-frame'>
           <div className="login-form">
@@ -75,7 +78,12 @@ class LoginForm extends React.Component {
               <img src="https://cdn.iconscout.com/icon/free/png-256/beer-69-129873.png" alt="Beer Icon" width="50"></img>
               <h3 className="subheader">Drink Socially</h3>
             </div>
-            <button className='demo-button' onClick={this.demoUser}>Demo User</button>
+            <div>
+              <button className='demo-button' onClick={this.demoUser}>Demo User</button>
+              <ul className="session-errors">
+                {errors} &thinsp;
+              </ul>
+            </div>
             <form>
               <label className="input-text">
                 <i className="fa fa-user"> </i> 

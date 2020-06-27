@@ -10,7 +10,6 @@ class SignupForm extends React.Component {
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
-    // this.showErrors = this.showErrors.bind(this);
   }
 
   handleInput(field) {
@@ -24,13 +23,7 @@ class SignupForm extends React.Component {
     this.props.submitSignup(this.state);
   }
 
-  render() {
-    // const errors = this.props.errors;
-    // const showErrors = Boolean(errors) && errors.length > 0 ? "show-errors" : "";
-    // const currentErrors = errors.map(error => {
-    //   return <li key={error} className="errors-li">{error}</li>
-    // });
-    
+  render() {   
     const errors = this.props.errors.map((error, i) => {
       return (<div key={i}> {error} </div>)
     })
@@ -51,10 +44,8 @@ class SignupForm extends React.Component {
                 </p>
               </div>
               <div>
-                {/* <ul className={`errors-list ${showErrors}`}>{currentErrors}</ul> */}
                 <ul className="session-errors">
-                  {errors}
-                  errors placeholder
+                  {errors} &thinsp;
                 </ul>
               </div>
             </div>

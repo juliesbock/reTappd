@@ -69,6 +69,7 @@
 .fa {
   line-height: 1.5;
 }
+
 .small-text{
   font-size: 12px;
   line-height: 1.1;
@@ -87,6 +88,12 @@ button{
   align-items: center;
   border: none;
   // border-color: (rgb(118, 118, 118), rgb(195, 195, 195));
+}
+
+.session-errors{
+  font-family: Arial, Helvetica, sans-serif;
+  color: red;
+  font-size: 14px;
 }
 
 .demo-button{
@@ -141,7 +148,6 @@ input{
 }
 
 form{
-  // width: 290px;
   height: 130px;
   flex-direction: row;
   justify-content: center;
@@ -155,7 +161,6 @@ form{
   font-weight: 500;
   padding: 20px 0 0 0;
   margin: 20px 0 0 0;
-  
 }
 
 a {

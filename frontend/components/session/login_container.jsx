@@ -9,7 +9,7 @@ const mSTP = (state, ownProps) => ({
 
 const mDTP = dispatch => ({
   submitLogin: (user) => dispatch(login(user)),
-  errors: (errors) => dispatch(receiveErrors(errors))
+  // errors: (errors) => dispatch(receiveErrors(errors))
 })
 
 export default connect(mSTP, mDTP)(LoginForm);
