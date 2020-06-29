@@ -33,14 +33,13 @@ class LoginForm extends React.Component {
       password: "password"
     }
 
-    const speed = 100;
+    const speed = 110;
     // set state to be "" for pw and UN
 
     if (this.state.username !== demoUser.username) {
       const inputUsername = setInterval(() => {
         if (this.state.username !== demoUser.username) {
           const temp = demoUser.username.slice(0, this.state.username.length + 1);
-          console.log(this.state);
           this.setState({ username: temp });
         } else {
           clearInterval(inputUsername);
@@ -72,7 +71,8 @@ class LoginForm extends React.Component {
     })
 
     return(
-      <div className='sessions-frame'>
+      <div className="main-background">
+        <div className='sessions-frame'>
           <div className="login-form">
             <div className="logo">
               <img src="https://cdn.iconscout.com/icon/free/png-256/beer-69-129873.png" alt="Beer Icon" width="50"></img>
@@ -88,14 +88,14 @@ class LoginForm extends React.Component {
               <label className="input-text">
                 <i className="fa fa-user"> </i> 
                 <input type="text" 
-                  placeholder="Username"
+                  placeholder=" Username"
                   value={this.state.username}
                   onChange={this.handleInput('username')}/>
               </label> <br/>
               <label className="input-text">
                 <i className="fa fa-lock"> </i> 
                 <input type="password"
-                  placeholder="Password"
+                  placeholder=" Password"
                   value={this.state.password}
                   onChange={this.handleInput('password')} />
               </label><br/>
@@ -105,6 +105,7 @@ class LoginForm extends React.Component {
               <p className='new-here'>New around here? &thinsp; <a href="/#/signup">Sign up!</a></p>
             </div>
           </div>
+        </div>
       </div>
     )
   }

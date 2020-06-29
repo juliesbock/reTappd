@@ -24,14 +24,14 @@ export const signup = (user) => dispatch => {
 )};
 
 export const login = (user) => dispatch => (
-  APIUtil.login(user).
-    then((userRes) => (dispatch(receiveCurrentUser(userRes))))
+  APIUtil.login(user)
+    .then((userRes) => (dispatch(receiveCurrentUser(userRes))))
     .fail((errors) => dispatch(receiveErrors(errors.responseJSON)))
 );
 
-export const logout = () => dispatch => (
-  APIUtil.logout()
+export const logout = () => dispatch => {
+  return APIUtil.logout()
     .then(() => dispatch(logoutCurrentUser()))
     .fail((errors) => dispatch(receiveErrors(errors.responseJSON)))
-)
+}
 
