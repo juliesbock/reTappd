@@ -28,7 +28,8 @@ Rails.application.configure do
   end
 
   # Store uploaded files on the local file system (see config/storage.yml for options)
-  config.active_storage.service = :local
+  # config.active_storage.service = :local
+  config.active_storage.service = :amazon_dev
 
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
@@ -59,3 +60,10 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 end
+
+
+
+
+# ActiveStorage::Blob::Analyzable, 
+# expected /Users/juliebock/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.4.3/app/models/active_storage/blob/analyzable.rb to define it
+#     from /Users/juliebock/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activesupport-5.2.4.3/lib/active_support/dependencies.rb:511:in `load_missing_constant'
