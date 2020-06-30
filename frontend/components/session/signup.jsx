@@ -12,6 +12,10 @@ class SignupForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  componentDidMount() {
+    this.props.clearErrors()
+  }
+
   handleInput(field) {
     return e => {
       this.setState({ [field]: e.currentTarget.value });
@@ -20,7 +24,8 @@ class SignupForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.submitSignup(this.state);
+    this.props.submitSignup(this.state)
+      .then(() => this.props.history.push('/home'));
   }
 
   render() {   

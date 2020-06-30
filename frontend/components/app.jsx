@@ -4,7 +4,7 @@ import { AuthRoute, ProtectedRoute} from "../util/route_util"
 import SignupContainer from './session/signup_container';
 import LoginContainer from './session/login_container';
 import SplashPage from './splash/splash_container'
-import Header from './header/navbar'
+import Header from './header/navbar_container'
 
 
 const App = () => (

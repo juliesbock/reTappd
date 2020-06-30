@@ -10,7 +10,6 @@
 #  updated_at      :datetime         not null
 #
 class User < ApplicationRecord
-
   attr_reader :password
 
   validates :username, :password_digest, :session_token, presence: true
@@ -20,8 +19,8 @@ class User < ApplicationRecord
       message: "Please choose a password with at least 6 characters."}, 
       allow_nil: true
 
-
   after_initialize :ensure_session_token
+  has_one_attached :photo
 
   def self.find_by_credentials(username, password) 
     user = User.find_by(username: username)

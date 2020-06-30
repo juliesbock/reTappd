@@ -13,6 +13,10 @@ class LoginForm extends React.Component {
     this.demoUser = this.demoUser.bind(this);
   }
 
+  componentDidMount() {
+    this.props.clearErrors()
+  }
+
   handleInput(field) {
     return e => {
       this.setState({ [field]: e.currentTarget.value });
@@ -22,7 +26,7 @@ class LoginForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.submitLogin(this.state)
-      // .then(() => this.props.history.push('/'));
+      .then(() => this.props.history.push('/home'));
   }
 
   demoUser(e) {
@@ -57,7 +61,8 @@ class LoginForm extends React.Component {
             this.setState({ password: temp });
           } else {
             clearInterval(inputPassword);
-            this.props.submitLogin(demoUser);
+            this.props.submitLogin(demoUser)
+              .then(() => this.props.history.push('/home'));
           }
         }, speed);
       }
