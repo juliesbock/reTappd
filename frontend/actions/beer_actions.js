@@ -4,7 +4,7 @@ export const RECEIVE_BEER_ERRORS = 'RECEIVE_BEER_ERRORS'
 import * as APIUtil from "../util/beer_util"
 
 const receiveAllBeers = () => ({
-  ype: RECEIVE_ALL_BEERS,
+  type: RECEIVE_ALL_BEERS,
   beers
 })
 

@@ -26,7 +26,7 @@ class NavBar extends React.Component {
         </div>
         <div className="right-header">
           <img className="header-user" src="https://gravatar.com/avatar/2c05a94811025ae7058a3c5ed7dc10ed?size=100&d=https%3A%2F%2Funtappd.akamaized.net%2Fsite%2Fassets%2Fimages%2Fdefault_avatar_v3_gravatar.jpg%3Fv%3D2" />
-          <button className="splash-btn header-button" onClick={this.handleLogout}>Logout</button>
+          <button className="splash-btn" id="header-button" onClick={this.handleLogout}>Logout</button>
         </div>
       </header>
     )

@@ -9,7 +9,7 @@ import BeerShow from './beers/beers_container'
 
 
 const App = () => (
-  <div>
+  <body>
     {/* {currentUser ? <Header/> : 'not logged in'} */}
       <Switch>
         <Route path="/home" component={Header} />
@@ -18,7 +18,7 @@ const App = () => (
         <AuthRoute path="/login" component={LoginContainer} />
         <Route path="/" component={SplashPage} />
       </Switch>
-  </div>
+  </body>
 );
 
 export default App;
