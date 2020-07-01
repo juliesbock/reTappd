@@ -9,7 +9,6 @@ const mSTP = ({ session }) => {
 };
 
 const mDTP = dispatch => {
-  // debugger
   return {
     logout: () => dispatch(logout()),
   }
