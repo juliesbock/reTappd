@@ -23,7 +23,7 @@ class BeerShow extends React.Component{
   render(){
     if (this.props.beer === undefined) return null;
     if (this.props.beer.ibu === null) this.props.beer.ibu = "0";
-
+    window.scrollTo(0, 0)
     return(
       <div>
         <Header />

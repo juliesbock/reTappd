@@ -9,7 +9,9 @@ class BeerIndex extends React.Component {
     this.props.fetchBeers();
   }
 
+  
   render(){
+    window.scrollTo(0, 0)
     const BeerIndexItems = this.props.beers.map(beer => {
       return (
         <BeerIndexItem
