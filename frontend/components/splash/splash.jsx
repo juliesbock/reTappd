@@ -9,14 +9,34 @@ class Splash extends React.Component {
       <>
         <div className="main-background">
           <div className="splash-main">
-            <div className="login-signup-upper">
-              <div className="splash-left"></div>
-                <div className="splash-right">
-                <Link to="/login" className="splash-btn">Sign In</Link> <br />
-                <Link to="/signup" className="splash-btn">Create an Account</Link>
+            <div className="login-signup-header">
+              <div></div>
+              <div className="splash-header-right">
+              <Link to="/login" className="splash-btn">Sign In</Link> <br />
+              <Link to="/signup" className="splash-btn">Create an Account</Link>
               </div>
             </div>
-            {/* will put rest of splash page contents */}
+{/* fix below */}
+            <div className='splash'>
+              <div className='splash-div'>
+                <div className="logo">
+                  {/* <img src="https://cdn.iconscout.com/icon/free/png-256/beer-69-129873.png" alt="Beer Icon" width="50"></img> */}
+                  {/* <img src="https://untappd.akamaized.net/assets/custom/homepage/images/ut-logo-bottles.svg" alt=""/> */}
+                  <i class="fab fa-untappd"></i>
+
+                  <h1 className='splash-logo'>Retappd</h1>
+                  <h3 className="subheader">Drink Socially</h3>
+                </div>              
+              <div className='short-bar'></div>
+              <h2 className='logo-message'>Discover and share your favorite beer.</h2>
+            </div>
+
+            <div className='splash-div'>
+              <img className='splash-picture'
+                src="https://untappd.akamaized.net/assets/custom/homepage/images/masthead-img-main.png"
+                alt="Phone-picture" />
+            </div>
+          </div>
           </div>
         </div>
 

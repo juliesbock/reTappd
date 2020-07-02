@@ -3,7 +3,7 @@ export const RECEIVE_BEER = "RECEIVE_BEER"
 export const RECEIVE_BEER_ERRORS = 'RECEIVE_BEER_ERRORS'
 import * as APIUtil from "../util/beer_util"
 
-const receiveAllBeers = () => ({
+const receiveAllBeers = (beers) => ({
   type: RECEIVE_ALL_BEERS,
   beers
 })

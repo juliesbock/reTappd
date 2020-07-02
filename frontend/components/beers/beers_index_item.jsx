@@ -1,27 +1,54 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import Header from '../header/navbar_container'
 
+const BeerIndexItem = (props) => {
+  if (props.beer.ibu === null) props.beer.ibu = "0";
 
-
-class BeerIndexItem extends React.Component {
-  constructor(props) {
-    super(props);
-
-  }
-  componentDidMount() {
-    this.props.fetchBeer(this.props.match.params.beerId)
-  }
-
-  render() {
-    if (this.props.beer === undefined) return null;
-
-    if (this.props.beer.ibu === null) this.props.beer.ibu = "n/a"
-
-    return (
-      'hello'
-    )
-  }
+  return (
+    <div>
+      <div className="beer-show-all">
+        <div className="beer-show-box">
+          <div className="beer-info-top">
+            <div className="beer-photo-box">
+              <Link to={`/beers/${props.beer.id}`}>
+                <img className='beer-photo' src={props.beer.photo} />
+              </Link>
+              {/* <img className='beer-photo' src=""/> */}
+            </div>
+            <div className='beer-info-top-details'>
+              <Link className="no-underline-link" to={`/beers/${props.beer.id}`}>
+                <h1 className="no-underline-link">{props.beer.name}</h1>
+              </Link>
+              <a href="" className="no-underline-link"><h2>Brewery: {props.beer.brewery_id}</h2></a>
+              <p>{props.beer.style}</p>
+            </div>
+          </div>
+          <div className="beer-info-middle">
+            <p className="beer-middle-content">{props.beer.abv}% ABV</p>
+            <p className="beer-middle-content">{props.beer.ibu} IBU</p>
+            <p className="beer-middle-content">Rating: 4.5</p>
+            <p className="beer-middle-content">Reviews: 5</p>
+          </div>
+          <div className="beer-info-description">
+            <p>{props.beer.description}</p>
+            <div className="add-space"></div>
+            <div className="checkin-beer-show">
+              <Link to={`/beers/${props.beer.id}`}>
+                <div className="checkin-box">
+                  <i className="fa fa-check"> </i>
+                </div>
+              </Link>
+              {/* <div className="checkin-dropdown-content">
+                <ul className="checkin-dropdown-list">
+                  <p>Check-in this Beer</p>
+                </ul>
+              </div> */}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
 }
 
 export default BeerIndexItem;

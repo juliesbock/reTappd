@@ -6,12 +6,16 @@
   // background-color: #f5f2e8;
   align-items: center;
   justify-content: center;
-  padding: 10px;
+  // padding: 10px;
 
   p{
     color: #888;
     font-size: 1.125em;
     line-height: 1.25em;
+  }
+
+  .no-underline-link:hover {
+    text-decoration: underline;
   }
 }
 
@@ -34,6 +38,8 @@
   padding: 10px;
 }
 
+
+
 .beer-info-description{
   display: flex;
   padding: 10px;
@@ -52,14 +58,14 @@
     font-weight: 400;
     font-size: 2em;
     line-height: 1em;
-    margin-bottom: 6px;
+    padding-bottom: 6px;
     overflow: hidden;
     text-overflow: ellipsis;
   }
 
   h2{
     font-size: 20px;
-    margin-bottom: 6px;
+    padding-bottom: 6px;
   }
 }
 
@@ -87,6 +93,10 @@
   flex: 1 1 0;
 }
 
+.add-space{
+  width: 45px;
+}
+
 .fa-plus, .fa-check{
   background-color: #fc0;
   color: white;
@@ -111,5 +121,4 @@
   height: 100px;
   width: 100px;
   margin: 5px;
-  border: 1px solid black;
 }

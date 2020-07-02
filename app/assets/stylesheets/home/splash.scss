@@ -1,4 +1,4 @@
-.login-signup-upper{
+.login-signup-header{
   display: flex;
   justify-content: space-between;
   height: 100px;
@@ -12,7 +12,7 @@
   flex-direction: row;
 }
 
-.splash-right{
+.splash-header-right{
   display: inline-flex;
 }
 
@@ -37,4 +37,73 @@
   background-color: #fff;
   font-weight: 600;
   color: #000;
+}
+
+.splash-right{
+  display: flex;
+}
+
+.splash{
+  display: flex;
+  justify-content: space-between;
+}
+
+.splash-div {
+  width: 550px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  vertical-align: middle;
+
+  .subheader{
+    font-size: 0.5rem;
+    color: white;
+    font-weight: 400;
+    letter-spacing: 5px;
+  }
+}
+
+.short-bar {
+  background: #ffc000;
+  height: 4px;
+  width: 50px;
+  margin: 20px auto;
+}
+
+i.fab.fa-untappd {
+  font-size: 6rem;
+  color: white;
+  text-align: center;
+}
+
+.splash-logo{
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 10px 0 0 0;
+  letter-spacing: 5px;
+}
+
+.flipH {
+  transform: scale(-1, 1);
+  // color: #1c87c9;
+  -moz-transform: scale(-1, 1);
+  -webkit-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
+
+div .logo{
+  // border: 5px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  vertical-align: middle;
+  margin: 5px;
 }
