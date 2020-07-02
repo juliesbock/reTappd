@@ -36,7 +36,8 @@ class BeerShow extends React.Component{
               </div>
               <div className='beer-info-top-details'>
                 <h1>{this.props.beer.name}</h1>
-                <a href="" className="no-underline-link"><h2>Brewery: {this.props.beer.brewery_id}</h2></a>
+                {/* <a href="" className="no-underline-link"><h2>Brewery: {this.props.beer.brewery_id}</h2></a> */}
+                <a href="" className="no-underline-link"><h2>Prairie Artisan Ales</h2></a>
                 <p>{this.props.beer.style}</p>
               </div>
             </div>
