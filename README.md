@@ -1,6 +1,6 @@
 # RETAPPD
 
-Retappd is a site for users to review and share their favorite beers. 
+[Retappd](https://retappd.herokuapp.com/) is a site for users to review and share their favorite beers. It is a clone of [Untappd](http://untappd.com/). Users can log and discover beers as they drink them. They'll get to know their favorite styles of beers while discovering new breweries with their friends.
 
 
 ## Features
