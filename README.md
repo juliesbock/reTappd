@@ -1,24 +1,30 @@
-# README
+# RETAPPD
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Retappd is a site for users to review and share their favorite beers. 
 
-Things you may want to cover:
 
-* Ruby version
+## Features
 
-* System dependencies
+* Backend to Frontend user authenticiation. Includes password encryption and session token encryption.
+* User authentication protects routes and redirects users to login if their session token is no longer valid.
+* On login, users are redirected to the home page where they can view all beers in the app.
+* Users can view specific details of the beer (IBU, beer style, brewery, ABV, etc).
+* Upon logout, users are redirected to the login page.
 
-* Configuration
+### Backend
+* Ruby
+* Rails
+* PostgreSQL
 
-* Database creation
+### Frontend
+* React
+* Redux
+* JavaScript
 
-* Database initialization
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Future Features
+* User Profile
+* User Friendships
+* Search
+* Review Feed
+* Toasts and comments
