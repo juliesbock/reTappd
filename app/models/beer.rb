@@ -10,6 +10,7 @@
 #  brewery_id  :integer          not null
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  ibu         :float
 #
 class Beer < ApplicationRecord
   validates :name, :style, :brewery_id, presence: true

@@ -1,16 +1,13 @@
 # == Schema Information
 #
-# Table name: beers
+# Table name: breweries
 #
 #  id          :bigint           not null, primary key
 #  name        :string           not null
-#  style       :string           not null
+#  location    :string           not null
 #  description :text
-#  abv         :float
-#  brewery_id  :integer          not null
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
-#  ibu         :float
 #
 
 # This model initially had no columns defined. If you add columns to the
