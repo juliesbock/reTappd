@@ -10,7 +10,7 @@
 #  location   :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#
+
 class Checkin < ApplicationRecord
   validates :beer_id, :user_id, presence: true
   validates :rating, numericality: {greater_than_or_equal_to: 0.0}

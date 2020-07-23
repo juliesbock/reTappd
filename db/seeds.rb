@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+
+## beers 
 require 'open-uri';
 
 beer1 = Beer.new({
@@ -80,3 +82,23 @@ beer3.save!
 beer4.save!
 beer5.save!
 beer6.save!
+
+## breweries 
+brewery1 = Brewery.new({
+  name: 'Prairie Artisan Ales',
+  location: 'Krebs, OK',
+  description: 'Welcome to the world of Prairie Artisan Ales. A company started by two brothers. We didn’t start it due to a lack of good beer, or whatever people like to say in this part of their website. We wanted to do something that was awesome. We have the talent, and most importantly the years of experience needed to get it done. So we did it. We have funded the company on our own, and only want to work with people that care about beer, super good beer. Our goal is to show people what is possible when you start with “step one”'
+})
+
+brewery2 = Brewery.new({
+  name: 'Mikkeller',
+  location: 'Copenhagen, Denmark',
+  description: 'In 2006 he was a math and physics teacher that started experimenting with hops, malt and yeast back home in his kitchen in Copenhagen. Today Mikkel Borg Bjergsø exports his micro brewed beer to 40 different countries and is internationally acclaimed as one of the most innovative and cutting edge brewers in the world.'
+})
+
+# fileBrewery1 = open('https://retappd-heroku.s3-us-west-1.amazonaws.com/bomb.jpeg')
+# fileBrewery2 = open('https://retappd-heroku.s3-us-west-1.amazonaws.com/rainbow.jpg')
+# brewery1.photo.attach(io: fileBrewery1, filename: 'bomb.jpg')
+# brewery2.photo.attach(io: fileBrewery2, filename: 'rainbow.jpg')
+
+
