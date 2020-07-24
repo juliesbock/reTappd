@@ -4,9 +4,9 @@ if beer.photo.attached?
     json.photo url_for(beer.photo)
 end
 
-# json.checkins do
-#     json.array! beer.checkins, :id
-# end
+json.checkins do
+    json.array! beer.checkins, :id
+end
 
 # json.userCheckins do
 #     json.array! beer.checkins, :user_id

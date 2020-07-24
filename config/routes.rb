@@ -8,7 +8,5 @@ Rails.application.routes.draw do
     resources :checkins, except: [:new, :edit]
     resources :breweries, only: [:index, :create, :show, :update]
     resource :session, only: [:create, :destroy]
-
   end
-  
 end

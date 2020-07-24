@@ -16,4 +16,7 @@ class Beer < ApplicationRecord
   validates :name, :style, :brewery_id, presence: true
 
   has_one_attached :photo
+  belongs_to :brewery
+  has_many :checkins
+  
 end
