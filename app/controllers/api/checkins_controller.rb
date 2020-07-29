@@ -22,7 +22,7 @@ class Api::CheckinsController < ApplicationController
   end
 
   def update
-    @checkin = Checkin.find(params[:id])
+    @checkin = Checkin.find_by(id: params[:id])
 
     if @checkin.update(checkin_params)
       render :show

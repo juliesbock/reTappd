@@ -1,3 +1,4 @@
+//show
 export const fetchBeer = beerId => (
   $.ajax({
     method: 'GET',
@@ -5,6 +6,7 @@ export const fetchBeer = beerId => (
   })
 );
 
+//index
 export const fetchBeers = () => (
   $.ajax({
     method: 'GET',
