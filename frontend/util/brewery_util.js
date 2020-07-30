@@ -14,14 +14,16 @@ export const fetchBreweries = () => (
   })
 );
 
+//create
 export const createBrewery = (brewery) => (
   $.ajax({
-    method: `CREATE`,
+    method: `POST`,
     url: `/api/breweries/${brewery.id}`,
     data: {brewery}
   })
 );
 
+//update
 export const updateBrewery = (brewery) => (
   $.ajax({
     method: `PATCH`,
@@ -29,13 +31,3 @@ export const updateBrewery = (brewery) => (
     data: {brewery}
   })
 );
-
-
-
-// export const deleteCheckin = (id) => (
-//   $.ajax({
-//     method: 'delete',
-//     url: `api/checkins/${id}`
-//   })
-// )
-

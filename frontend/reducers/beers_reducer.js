@@ -1,17 +1,17 @@
 import { RECEIVE_BEER, RECEIVE_ALL_BEERS } from "../actions/beer_actions";
 
 
-const beersReducer = (state = {}, action) => {
-  Object.freeze(state);
-  // const nextState = Object.assign({}, state)
+const beersReducer = (oldState = {}, action) => {
+  Object.freeze(oldState);
+  const nextState = Object.assign({}, oldState)
 
   switch (action.type) {
     case RECEIVE_ALL_BEERS:
-      return Object.assign({}, state, action.beers)
+      return Object.assign({}, nextState, action.beers)
     case RECEIVE_BEER:
-      return Object.assign({}, state, {[action.beer.id]: action.beer})
+      return Object.assign({}, nextState, {[action.beer.id]: action.beer})
     default:
-      return state;
+      return nextState;
   }
 }
 

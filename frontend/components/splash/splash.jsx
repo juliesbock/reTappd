@@ -22,7 +22,7 @@ class Splash extends React.Component {
                   <div className="logo">
                     {/* <img src="https://cdn.iconscout.com/icon/free/png-256/beer-69-129873.png" alt="Beer Icon" width="50"></img> */}
                     {/* <img src="https://untappd.akamaized.net/assets/custom/homepage/images/ut-logo-bottles.svg" alt=""/> */}
-                    <i class="fab fa-untappd"></i>
+                    <i className="fab fa-untappd"></i>
 
                     <h1 className='splash-logo'>Retappd</h1>
                     <h3 className="subheader">Drink Socially</h3>
