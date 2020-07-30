@@ -18,4 +18,4 @@ const BreweriesReducer = (oldState = {}, action) => {
   }
 }
 
-export default BreweriesReducer;
+export default BreweriesReducer; 
