@@ -25,12 +25,12 @@ const Protected = ({ component: Component, path, loggedIn, exact }) => (
 );
 
 // access the Redux state to check if the user is logged in
-const mapStateToProps = state => {
+const mSTP = state => {
   return { loggedIn: Boolean(state.session.id) };
 }
 
 // connect Auth to the redux state
-export const AuthRoute = withRouter(connect(mapStateToProps)(Auth));
+export const AuthRoute = withRouter(connect(mSTP)(Auth));
 
 // connect Protected to the redux state
-export const ProtectedRoute = withRouter(connect(mapStateToProps)(Protected));
+export const ProtectedRoute = withRouter(connect(mSTP)(Protected));

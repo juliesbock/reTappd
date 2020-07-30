@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
   ReactDOM.render(<Root store={store} />, root);
 
   /*/ TODO: REMOVE AFTER DEV /*/
+  
   window.getState = store.getState;
   window.dispatch = store.dispatch;
   window.signup = signup;
@@ -40,4 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
   window.updateCheckin = updateCheckin;
   window.createCheckin = createCheckin;
   window.deleteCheckin = deleteCheckin;
+
+  /*/ TODO: REMOVE ABOVE DEV /*/
+
 });

@@ -4,7 +4,7 @@ import {
   REMOVE_CHECKIN
 } from '../actions/checkin_actions';
 
-const CheckinsReducer = (oldState = {}, action) => {
+const checkinsReducer = (oldState = {}, action) => {
   Object.freeze(oldState)
   let nextState = Object.assign({}, oldState)
 
@@ -22,4 +22,4 @@ const CheckinsReducer = (oldState = {}, action) => {
   }
 }
 
-export default CheckinsReducer;
+export default checkinsReducer;
