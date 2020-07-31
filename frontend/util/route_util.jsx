@@ -8,7 +8,7 @@ const Auth = ({ component: Component, path, loggedIn, exact }) => (
     !loggedIn ? (
       <Component {...props} />
     ) : (
-      <Redirect to="/" />
+      <Redirect to="/home" />
     )
   )} />
 );
@@ -19,7 +19,7 @@ const Protected = ({ component: Component, path, loggedIn, exact }) => (
     loggedIn ? (
       <Component {...props} />
     ) : (
-      <Redirect to="/" />
+      <Redirect to="/login" />
     )
   )} />
 );
@@ -29,8 +29,5 @@ const mSTP = state => {
   return { loggedIn: Boolean(state.session.id) };
 }
 
-// connect Auth to the redux state
 export const AuthRoute = withRouter(connect(mSTP)(Auth));
-
-// connect Protected to the redux state
 export const ProtectedRoute = withRouter(connect(mSTP)(Protected));

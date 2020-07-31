@@ -19,8 +19,10 @@ const BeerIndexItem = (props) => {
               <Link className="no-underline-link" to={`/beers/${props.beer.id}`}>
                 <h1 className="no-underline-link">{props.beer.name}</h1>
               </Link>
-              {/* <a href="" className="no-underline-link"><h2>Brewery: {props.beer.brewery_id}</h2></a> */}
-              <a href="" className="no-underline-link"><h2>Prairie Artisan Ales</h2></a>
+              <Link to={`/brewery/${props.brewery.id}`}>
+                <h2>Brewery: {props.brewery.name}</h2>
+              </Link>
+              {/* <a href="" className="no-underline-link"><h2>Prairie Artisan Ales</h2></a> */}
               <p>{props.beer.style}</p>
             </div>
           </div>

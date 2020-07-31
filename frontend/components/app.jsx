@@ -7,13 +7,13 @@ import SplashPage from './splash/splash_container';
 import Header from './header/navbar_container';
 import BeerShow from './beers/beers_container';
 import BeersIndex from './beers/beers_index_container';
-// import BreweryShow from './breweries/brewery_show'
+import BreweryShow from './breweries/brewery_show'
 
 
 const App = () => (
   <div className="body">
     <Switch>
-      {/* <Route path="/brewery/:breweryId" component={BreweryShow} /> */}
+      <Route path="/brewery/:breweryId" component={BreweryShow} />
       <ProtectedRoute path="/home" component={BeersIndex} />
       <ProtectedRoute path="/beers/:beerId" component={BeerShow} />
       <AuthRoute path="/signup" component={SignupContainer} />

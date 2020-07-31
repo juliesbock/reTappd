@@ -26,20 +26,20 @@ export const fetchBreweries = () => dispatch => {
   .fail((errors) => dispatch(receiveErrors(errors.responseJSON)))
 }
 
-export const fetchBrewery = () => dispatch => (
-  BrewAPIUtil.fetchBrewery()
+export const fetchBrewery = (breweryId) => dispatch => (
+  BrewAPIUtil.fetchBrewery(breweryId)
     .then((brewery) => dispatch(receiveBrewery(brewery)))
     .fail((errors) => dispatch(receiveErrors(errors.responseJSON)))
 )
 
-export const createBrewery = () => dispatch => {
-  return BrewAPIUtil.createBrewery()
+export const createBrewery = (brewery) => dispatch => {
+  return BrewAPIUtil.createBrewery(brewery)
     .then((brewery) => dispatch(receiveBrewery(brewery)))
     .fail((errors) => dispatch(receiveErrors(errors.responseJSON)))
 }
 
-export const updateBrewery = () => dispatch => {
-  return BrewAPIUtil.updateBrewery()
+export const updateBrewery = (brewery) => dispatch => {
+  return BrewAPIUtil.updateBrewery(brewery)
     .then((brewery) => dispatch(receiveBrewery(brewery)))
     .fail((errors) => dispatch(receiveErrors(errors.responseJSON)))
 }

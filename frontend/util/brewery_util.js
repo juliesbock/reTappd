@@ -1,10 +1,11 @@
 //show
-export const fetchBrewery = brewId => (
-  $.ajax({
+export const fetchBrewery = brewId => {
+  // debugger
+  return $.ajax({
     method: `GET`,
     url: `/api/breweries/${brewId}`
   })
-);
+};
 
 //index
 export const fetchBreweries = () => (
