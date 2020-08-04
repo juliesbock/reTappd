@@ -11,7 +11,9 @@ class BeerShow extends React.Component{
   }
 
   componentDidMount() {
-    this.props.fetchBeer(this.props.match.params.beerId)
+    this.props.fetchBeer(this.props.match.params.beerId);
+    this.props.fetchBreweries();
+    // debugger;
   }
 
   componentDidUpdate(prevProps){
@@ -23,6 +25,10 @@ class BeerShow extends React.Component{
   render(){
     if (this.props.beer === undefined) return null;
     if (this.props.beer.ibu === null) this.props.beer.ibu = "0";
+    // let breweryId = this.props.beer.brewery_id;
+    // if (this.props.brewery === undefined) this.props.brewery = null;
+
+    // debugger
     window.scrollTo(0, 0)
     return(
       <div>
@@ -36,8 +42,8 @@ class BeerShow extends React.Component{
               </div>
               <div className='beer-info-top-details'>
                 <h1>{this.props.beer.name}</h1>
-                {/* <a href="" className="no-underline-link"><h2>Brewery: {this.props.beer.brewery_id}</h2></a> */}
                 <a href="" className="no-underline-link"><h2>Prairie Artisan Ales</h2></a>
+                {/* <h2>Brewery: {this.props.breweries[breweryId].name}</h2> */}
                 <p>{this.props.beer.style}</p>
               </div>
             </div>

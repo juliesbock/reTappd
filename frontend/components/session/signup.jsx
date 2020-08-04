@@ -39,10 +39,12 @@ class SignupForm extends React.Component {
           <div className='background-wrapper'>
             <div className="signin-form">
               <div>
-                <div className="logo">
-                  <img src="https://cdn.iconscout.com/icon/free/png-256/beer-69-129873.png" alt="Beer Icon" width="50"></img>
-                  <h3 className="subheader">Drink Socially</h3>
-                </div>
+                <Link to="/">
+                  <div className="logo">
+                    <img src="https://cdn.iconscout.com/icon/free/png-256/beer-69-129873.png" alt="Beer Icon" width="50"></img>
+                    <h3 className="subheader">Drink Socially</h3>
+                  </div>
+                </Link>
                 <div className="brewery-box">
                   <p className="small-text">
                     Have an account? Want to login with a Demo Account?
