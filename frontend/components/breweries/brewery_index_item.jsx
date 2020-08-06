@@ -12,7 +12,7 @@ const BreweryIndexItem = (props) => {
           {/* </Link> */}
         </div>
         <div className="brew-name-location">
-          <Link to={`/brewery/${props.brewery.id}`}>
+          <Link to={`/breweries/${props.brewery.id}`}>
             <h1>{props.brewery.name}</h1>
           </Link>
           <h3>{props.brewery.location}</h3>

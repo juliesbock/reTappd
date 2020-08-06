@@ -26,7 +26,7 @@ class NavBar extends React.Component {
           <Link to="/home"  className="no-underline-link">
             <h1 className='nav-item'>Beers</h1>
           </Link>
-          <Link to="/brewery" className="no-underline-link">
+          <Link to="/breweries" className="no-underline-link">
             <h1 className='nav-item'>Breweries</h1>
           </Link>
           <a href="https://github.com/juliesbock/reTappd" className="no-underline-link" target="_blank" rel="noopener noreferrer">

@@ -10,14 +10,14 @@ import BeersIndex from './beers/beers_index_container';
 import BreweryShow from './breweries/brewery_show'
 import BreweryIndex from './breweries/brewery_index'
 // import CheckinIndex from './checkins/checkin_index'
-//* <Route path="/checkins" component={CheckinIndex}/> *//
+// <Route path="/checkins" component={CheckinIndex}/> //
 
 
 const App = () => (
   <div className="body">
     <Switch>
-      <Route exact path="/brewery" component={BreweryIndex} />
-      <Route path="/brewery/:breweryId" component={BreweryShow} />
+      <Route exact path="/breweries" component={BreweryIndex} />
+      <Route path="/breweries/:breweryId" component={BreweryShow} />
       <ProtectedRoute path="/home" component={BeersIndex} />
       <ProtectedRoute path="/beers/:beerId" component={BeerShow} />
       <AuthRoute path="/signup" component={SignupContainer} />

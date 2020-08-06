@@ -33,9 +33,26 @@ class BreweryShow extends React.Component{
     return(
       <div>
         <Header/>
-        {brewery.name} 
-        {brewery.location}
-        {brewery.description}
+        <div className="beer-show-all">
+          <div className="beer-show-box">
+            <div className='brew-show-top'>
+              <div className="beer-photo-box">
+                <img className='beer-photo'/>
+              </div>
+              <div className='beer-info-top-details'>
+                <h1>{brewery.name} </h1>
+                <h2>{brewery.location}</h2>
+              </div>
+            </div>
+            <div className="beer-info-middle">
+              <p className="beer-middle-content">Rating: 4.5</p>
+              <p className="beer-middle-content">Reviews: 5</p>
+            </div>
+            <div className='beer-info-description'>
+              {brewery.description}
+            </div>
+          </div>
+        </div>
       </div>
     )
   }
