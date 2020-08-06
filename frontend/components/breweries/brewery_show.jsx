@@ -27,13 +27,15 @@ class BreweryShow extends React.Component{
 
   render(){
     if (this.props.brewery === undefined) return 'no brewery here';
-    
+    let brewery = this.props.brewery;
+    window.scrollTo(0, 0)
+
     return(
       <div>
         <Header/>
-        {this.props.brewery.name} 
-        {this.props.brewery.location}
-        {this.props.brewery.description}
+        {brewery.name} 
+        {brewery.location}
+        {brewery.description}
       </div>
     )
   }

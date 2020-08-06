@@ -13,10 +13,7 @@
     font-size: 1.125em;
     line-height: 1.25em;
   }
-
-  .no-underline-link:hover {
-    text-decoration: underline;
-  }
+  
 }
 
 .beer-show-box{
@@ -37,8 +34,6 @@
   flex-direction: row;
   padding: 10px;
 }
-
-
 
 .beer-info-description{
   display: flex;
@@ -71,6 +66,10 @@
 
 .no-underline-link{
   text-decoration: none;
+}
+
+.no-underline-link:hover {
+  text-decoration: underline;
 }
 
 .beer-info-middle{

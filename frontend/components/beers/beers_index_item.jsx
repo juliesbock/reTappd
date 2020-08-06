@@ -5,8 +5,6 @@ const BeerIndexItem = (props) => {
   if (props.beer.ibu === null) props.beer.ibu = "0";
   let breweryId = props.brewery ? props.brewery.id : "";
   let breweryName = props.brewery ? props.brewery.name : "";
-  console.log(props.brewery)
-  // if (props.brewery.id)
 
   return (
     <div>
@@ -24,7 +22,7 @@ const BeerIndexItem = (props) => {
                 <h1>{props.beer.name}</h1>
               </Link>
               <Link to={`/brewery/${breweryId}`} className="no-underline-link">
-                <h2>Brewery: {breweryName}</h2>
+                <h2>{breweryName}</h2>
               </Link>
               <p>{props.beer.style}</p>
             </div>
