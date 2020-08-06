@@ -19,12 +19,12 @@ const removeCheckin = id => ({
   id
 })
 
-export const requestAllCheckins = () => dispatch => {
+export const fetchAllCheckins = () => dispatch => {
   return CheckinAPIUtil.fetchAllCheckins()
     .then(checkins => dispatch(receiveAllCheckins(checkins)))
 }
 
-export const requestCheckin = () => dispatch => {
+export const fetchCheckin = () => dispatch => {
   return CheckinAPIUtil.fetchCheckin()
     .then(checkin => dispatch(receiveCheckin(checkin)))
 }

@@ -32,14 +32,14 @@ export const fetchBrewery = (breweryId) => dispatch => (
     .fail((errors) => dispatch(receiveErrors(errors.responseJSON)))
 )
 
-export const createBrewery = (brewery) => dispatch => {
-  return BrewAPIUtil.createBrewery(brewery)
-    .then((brewery) => dispatch(receiveBrewery(brewery)))
-    .fail((errors) => dispatch(receiveErrors(errors.responseJSON)))
-}
+// export const createBrewery = (brewery) => dispatch => {
+//   return BrewAPIUtil.createBrewery(brewery)
+//     .then((brewery) => dispatch(receiveBrewery(brewery)))
+//     .fail((errors) => dispatch(receiveErrors(errors.responseJSON)))
+// }
 
-export const updateBrewery = (brewery) => dispatch => {
-  return BrewAPIUtil.updateBrewery(brewery)
-    .then((brewery) => dispatch(receiveBrewery(brewery)))
-    .fail((errors) => dispatch(receiveErrors(errors.responseJSON)))
-}
+// export const updateBrewery = (brewery) => dispatch => {
+//   return BrewAPIUtil.updateBrewery(brewery)
+//     .then((brewery) => dispatch(receiveBrewery(brewery)))
+//     .fail((errors) => dispatch(receiveErrors(errors.responseJSON)))
+// }

@@ -110,7 +110,9 @@ class LoginForm extends React.Component {
               <button className='signin-button' onClick={this.handleSubmit}>Sign In</button>
             </form>
             <div >
-              <p className='new-here'>New around here? &thinsp; <a href="/#/signup">Sign up!</a></p>
+              <p className='new-here'>New around here? &thinsp;
+                <Link to="/signup">Sign up!</Link>
+              </p>
             </div>
           </div>
         </div>

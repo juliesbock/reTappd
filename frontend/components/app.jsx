@@ -8,11 +8,15 @@ import Header from './header/navbar_container';
 import BeerShow from './beers/beers_container';
 import BeersIndex from './beers/beers_index_container';
 import BreweryShow from './breweries/brewery_show'
+import BreweryIndex from './breweries/brewery_index'
+// import CheckinIndex from './checkins/checkin_index'
+//* <Route path="/checkins" component={CheckinIndex}/> *//
 
 
 const App = () => (
   <div className="body">
     <Switch>
+      <Route exact path="/brewery" component={BreweryIndex} />
       <Route path="/brewery/:breweryId" component={BreweryShow} />
       <ProtectedRoute path="/home" component={BeersIndex} />
       <ProtectedRoute path="/beers/:beerId" component={BeerShow} />

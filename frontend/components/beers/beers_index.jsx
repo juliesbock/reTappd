@@ -18,7 +18,7 @@ class BeerIndex extends React.Component {
         <BeerIndexItem
           key={beer.id}
           beer={beer}
-          brewery={this.props.breweries[beer.brewery_id]}
+          brewery={this.props.breweries[beer.breweryId]}
         />
       )
     })

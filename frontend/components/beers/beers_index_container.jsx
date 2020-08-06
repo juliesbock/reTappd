@@ -4,10 +4,12 @@ import { fetchBeers } from '../../actions/beer_actions';
 import { fetchBreweries } from '../../actions/brewery_actions'
 
 
-const mSTP = state => ({
-  beers: Object.values(state.entities.beers),
-  breweries: Object.values(state.entities.breweries)
-})
+const mSTP = state => {
+  return{
+    beers: Object.values(state.entities.beers),
+    breweries: state.entities.breweries
+  }
+}
 
 const mDTP = dispatch => ({
   fetchBeers: () => dispatch(fetchBeers()),

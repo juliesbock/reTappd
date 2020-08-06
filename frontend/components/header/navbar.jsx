@@ -1,5 +1,5 @@
 import React from 'react'
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 class NavBar extends React.Component {
   constructor(props) {
@@ -18,7 +18,9 @@ class NavBar extends React.Component {
       <header className="session-header">
         <div className="left-header">
           <a href="/#/home">
-          <img className="header-logo" src="https://untappd.akamaized.net/assets/v3/images/untappd-logo-2@2x.png" height="50" />
+            <img className="header-logo" src="https://untappd.akamaized.net/assets/v3/images/untappd-logo-2@2x.png" height="50" />
+            <h1 className='nav-item'>Beers</h1>
+            <h1 className='nav-item'>Breweries</h1>
           </a>
           <div className="logo">
             {/* <img src="https://cdn.iconscout.com/icon/free/png-256/beer-69-129873.png" alt="Beer Icon" width="50"></img> */}

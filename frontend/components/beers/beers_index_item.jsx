@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom';
 
 const BeerIndexItem = (props) => {
   if (props.beer.ibu === null) props.beer.ibu = "0";
+  let breweryId = props.brewery ? props.brewery.id : "";
+  let breweryName = props.brewery ? props.brewery.name : "";
+  console.log(props.brewery)
+  // if (props.brewery.id)
 
   return (
     <div>
@@ -17,12 +21,11 @@ const BeerIndexItem = (props) => {
             </div>
             <div className='beer-info-top-details'>
               <Link className="no-underline-link" to={`/beers/${props.beer.id}`}>
-                <h1 className="no-underline-link">{props.beer.name}</h1>
+                <h1>{props.beer.name}</h1>
               </Link>
-              <Link to={`/brewery/${props.brewery.id}`}>
-                <h2>Brewery: {props.brewery.name}</h2>
+              <Link to={`/brewery/${breweryId}`} className="no-underline-link">
+                <h2>Brewery: {breweryName}</h2>
               </Link>
-              {/* <a href="" className="no-underline-link"><h2>Prairie Artisan Ales</h2></a> */}
               <p>{props.beer.style}</p>
             </div>
           </div>

@@ -31,7 +31,7 @@ class BreweryShow extends React.Component{
     return(
       <div>
         <Header/>
-        {this.props.brewery.name}
+        {this.props.brewery.name} 
         {this.props.brewery.location}
         {this.props.brewery.description}
       </div>

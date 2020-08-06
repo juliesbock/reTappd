@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../header/navbar_container';
-import BeerIndexItem from './beers_index_item';
-
-
 
 class BeerShow extends React.Component{
   constructor(props){
@@ -23,8 +20,10 @@ class BeerShow extends React.Component{
   }
 
   render(){
-    if (this.props.beer === undefined) return null;
+    // if (this.props.beer === undefined) return null;
     if (this.props.beer.ibu === null) this.props.beer.ibu = "0";
+    let beer = this.props.beer || null;
+    let brewery = this.props.breweries[this.props.beer.breweryId];
     // let breweryId = this.props.beer.brewery_id;
     // if (this.props.brewery === undefined) this.props.brewery = null;
 
@@ -37,25 +36,24 @@ class BeerShow extends React.Component{
           <div className="beer-show-box">
             <div className="beer-info-top">
               <div className="beer-photo-box">
-              <img className='beer-photo' src={this.props.beer.photo}/>
-              {/* <img className='beer-photo' src=""/> */}
+                <img className='beer-photo' src={beer.photo}/>
               </div>
               <div className='beer-info-top-details'>
-                <h1>{this.props.beer.name}</h1>
-                <a href="" className="no-underline-link"><h2>Prairie Artisan Ales</h2></a>
-                {/* <h2>Brewery: {this.props.breweries[breweryId].name}</h2> */}
-                <p>{this.props.beer.style}</p>
+                <h1>{beer.name}</h1>
+                <Link to={`/brewery/${beer.breweryId}`} className="no-underline-link">
+                  <h2>{brewery.name}</h2>
+                </Link>
+                <p>{beer.style}</p>
               </div>
             </div>
             <div className="beer-info-middle">
-              <p className="beer-middle-content">{this.props.beer.abv}% ABV</p>
-              <p className="beer-middle-content">{this.props.beer.ibu} IBU</p>
+              <p className="beer-middle-content">{beer.abv}% ABV</p>
+              <p className="beer-middle-content">{beer.ibu} IBU</p>
               <p className="beer-middle-content">Rating: 4.5</p>
               <p className="beer-middle-content">Reviews: 5</p>
             </div>
             <div className="beer-info-description">
-              <p>{this.props.beer.description}</p>
-
+              <p>{beer.description}</p>
               <div className="checkin-beer-show">
                 <a className="checkin-box">
                   <i className="fa fa-check">  </i>
