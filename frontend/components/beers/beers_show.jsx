@@ -20,9 +20,10 @@ class BeerShow extends React.Component {
   }
 
   render() {
+    if (this.props.beer.ibu === null) this.props.beer.ibu = "0";
+    
     let beer = this.props.beer || null;
     let brewery = this.props.breweries[this.props.beer.breweryId];
-    if (this.props.beer.ibu === null) this.props.beer.ibu = "0";
     // let breweryId = this.props.beer.brewery_id;
     // if (this.props.brewery === undefined) this.props.brewery = null;
 
