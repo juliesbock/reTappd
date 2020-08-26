@@ -17,9 +17,8 @@ class CheckinIndex extends React.Component{
   }
 
   render(){
-    
     return 'hello'
   }
 }
 
-export default connect(mSTP, mDTP)
+export default connect(mSTP, mDTP)(CheckinIndex)

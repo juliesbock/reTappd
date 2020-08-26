@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const BeerIndexItem = (props) => {
+  if (props.beer === null) return null;
+
   if (props.beer.ibu === null) props.beer.ibu = "0";
   let breweryId = props.brewery ? props.brewery.id : "";
   let breweryName = props.brewery ? props.brewery.name : "";
@@ -15,7 +17,6 @@ const BeerIndexItem = (props) => {
               <Link to={`/beers/${props.beer.id}`}>
                 <img className='beer-photo' src={props.beer.photo} />
               </Link>
-              {/* <img className='beer-photo' src=""/> */}
             </div>
             <div className='beer-info-top-details'>
               <Link className="no-underline-link" to={`/beers/${props.beer.id}`}>

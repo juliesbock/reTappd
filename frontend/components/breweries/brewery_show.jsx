@@ -1,5 +1,6 @@
 import Header from '../header/navbar_container';
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { fetchBrewery } from '../../actions/brewery_actions';
 
@@ -37,10 +38,13 @@ class BreweryShow extends React.Component{
           <div className="beer-show-box">
             <div className='brew-show-top'>
               <div className="beer-photo-box">
-                <img className='beer-photo'/>
+                {/* <img className='beer-photo'/> */}
+                <Link to={`/breweries/${brewery.id}`}>
+                  <img className='brew-photo' src={brewery.photo} />
+                </Link>
               </div>
               <div className='beer-info-top-details'>
-                <h1>{brewery.name} </h1>
+                <h1>{brewery.name}</h1>
                 <h2>{brewery.location}</h2>
               </div>
             </div>
@@ -51,6 +55,9 @@ class BreweryShow extends React.Component{
             <div className='beer-info-description'>
               {brewery.description}
             </div>
+          </div>
+          <div>
+            {/* <h1>show beers</h1> */}
           </div>
         </div>
       </div>
