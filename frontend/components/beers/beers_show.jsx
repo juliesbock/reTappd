@@ -57,9 +57,6 @@ class BeerShow extends React.Component {
                 <a className="checkin-box">
                   <i className="fa fa-check">  </i>
                 </a>
-                <a className="checkin-box">
-                  <i className="fa fa-plus">  </i>
-                </a>
                 {/* <div className="checkin-dropdown-content">
                   <ul className="checkin-dropdown-list">
                     <p>Check-in this Beer</p>

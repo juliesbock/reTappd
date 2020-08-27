@@ -16,8 +16,8 @@ import BreweryIndex from './breweries/brewery_index'
 const App = () => (
   <div className="body">
     <Switch>
-      <Route exact path="/breweries" component={BreweryIndex} />
-      <Route path="/breweries/:breweryId" component={BreweryShow} />
+      <ProtectedRoute exact path="/breweries" component={BreweryIndex} />
+      <ProtectedRoute path="/breweries/:breweryId" component={BreweryShow} />
       <ProtectedRoute path="/home" component={BeersIndex} />
       <ProtectedRoute path="/beers/:beerId" component={BeerShow} />
       <AuthRoute path="/signup" component={SignupContainer} />

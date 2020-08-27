@@ -32,7 +32,7 @@
 .brew-photo{
   height: 70px;
   width: 70px;
-  margin: 5px 5px 5px 0;
+  margin: 5px;
 }
 
 .brew-show-top{
@@ -40,3 +40,17 @@
   flex-direction: row;
   padding: 10px;
 }
+
+.brew-info-description{
+  display: flex;
+  padding: 10px;
+  p{
+    width: 100%;
+    padding: 0px 8px 8px;
+
+    font-size: 1.1em;
+    line-height: 1.15em;
+  }
+}
+
+

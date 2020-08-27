@@ -75,7 +75,7 @@ class SignupForm extends React.Component {
                 </label>
                 <p className="small-text">You must be of legal drinking age to join 
                 reTappd. By clicking Create Account, you agree to our &thinsp;
-                  <a href="https://untappd.com/terms">Terms</a>&thinsp; and <a href="https://untappd.com/privacy">Policies</a>.</p>
+                  <a href="https://untappd.com/terms" target="_blank">Terms</a>&thinsp; and <a href="https://untappd.com/privacy" target="_blank">Policies</a>.</p>
                   <br/>
                 <button className='signin-button' onClick={this.handleSubmit}>Create Account</button>
               </form>

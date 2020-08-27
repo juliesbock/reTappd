@@ -52,8 +52,8 @@ class BreweryShow extends React.Component{
               <p className="beer-middle-content">Rating: 4.5</p>
               <p className="beer-middle-content">Reviews: 5</p>
             </div>
-            <div className='beer-info-description'>
-              {brewery.description}
+            <div className='brew-info-description'>
+              <p>{brewery.description}</p>
             </div>
           </div>
           <div>

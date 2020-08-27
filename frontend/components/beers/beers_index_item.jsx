@@ -36,7 +36,6 @@ const BeerIndexItem = (props) => {
           </div>
           <div className="beer-info-description">
             <p>{props.beer.description}</p>
-            <div className="add-space"></div>
             <div className="checkin-beer-show">
               <Link to={`/beers/${props.beer.id}`}>
                 <div className="checkin-box">

@@ -16,7 +16,7 @@ Beer.destroy_all
 brewery1 = Brewery.new({
   name: 'Prairie Artisan Ales',
   location: 'Krebs, OK',
-  description: 'Welcome to the world of Prairie Artisan Ales. A company started by two brothers. We didn’t start it due to a lack of good beer, or whatever people like to say in this part of their website. We wanted to do something that was awesome. We have the talent, and most importantly the years of experience needed to get it done. So we did it. We have funded the company on our own, and only want to work with people that care about beer, super good beer. Our goal is to show people what is possible when you start with “step one”'
+  description: 'Welcome to the world of Prairie Artisan Ales. A company started by two brothers. We didn’t start it due to a lack of good beer, or whatever people like to say in this part of their website. We wanted to do something that was awesome. We have the talent, and most importantly the years of experience needed to get it done. So we did it. We have funded the company on our own, and only want to work with people that care about beer, super good beer. Our goal is to show people what is possible when you start with step one.'
 })
 
 breweryFile1 = open('https://retappd-heroku.s3-us-west-1.amazonaws.com/prairie_logo.jpg')
@@ -99,7 +99,7 @@ brewery2.save!
 rrBeer1 = brewery2.beers.new({
   name:  'Pliny the Elder',
   style: 'IPA - Imperial',
-  description: 'A true leader in the hop-wars of the west coast, Pliny the Elder hits you over the head with hoppy bitterness and manages to smooth the rough edges out enough to become an enjoyable brew.',
+  description: 'A true leader in the hop wars of the west coast, Pliny the Elder hits you over the head with hoppy bitterness and manages to smooth the rough edges out enough to become an enjoyable brew.',
   abv: 8.0,
   ibu: 100
 })
@@ -123,7 +123,7 @@ rrBeer3 = brewery2.beers.new({
 rrBeer4 = brewery2.beers.new({
   name:  'Consecration',
   style: 'American Wild Ale',
-  description: "Dark Ale aged in Cabernet Sauvignon barrels from local wineries. It is aged for 4 to 8 months with black currants, brettanomyces, lactobacillus, and pediococcus added to each barrel. Rich flavors of chocolate truffle, spice, tobacco, currants, and a bit of Cabernet. Very full-bodied, sip slowly!",
+  description: "Dark Ale aged in Cabernet Sauvignon barrels from local wineries. It is aged for 4 to 8 months with black currants, brettanomyces, lactobacillus, and pediococcus added to each barrel. Rich flavors of chocolate truffle, spice, tobacco, currants, and a bit of Cabernet. Very full bodied, sip slowly!",
   abv: 10,
   ibu: 10
 })
@@ -158,7 +158,7 @@ rrBeer5.save!
 brewery3 = Brewery.new({
   name: 'Great Lakes Brewing Company',
   location: 'Cleveland, OH',
-  description: 'Great Lakes Brewing Company (GLBC) was founded in 1988 by brothers Patrick and Daniel Conway in Cleveland, Ohio. Independent and employee-owned, GLBC is known for its award-winning portfolio of fresh, balanced, and flavorful beers with names and artwork that tell stories of the Great Lakes region. Since its founding, GLBC has remained a principle-centered brewery with a “triple bottom line” philosophy, balancing financial responsibility with social and environmental responsibility.'
+  description: 'Great Lakes Brewing Company (GLBC) was founded in 1988 by brothers Patrick and Daniel Conway in Cleveland, Ohio. Independent and employee owned, GLBC is known for its award winning portfolio of fresh, balanced, and flavorful beers with names and artwork that tell stories of the Great Lakes region. Since its founding, GLBC has remained a principle centered brewery with a “triple bottom line” philosophy, balancing financial responsibility with social and environmental responsibility.'
 })
 
 breweryFile3 = open('https://retappd-heroku.s3-us-west-1.amazonaws.com/brewery-glbc.jpg')
@@ -177,7 +177,7 @@ greatLakesBeer0 = brewery3.beers.new({
 greatLakesBeer1 = brewery3.beers.new({
   name: "Edmund Fitzgerald",
   style: "Porter - American",
-  description: "A complex, roasty porter with a bittersweet, chocolate-coffee taste and bold hop presence. A bittersweet tribute to the legendary freighter's fallen crew--taken to soon when the gales of November came early",
+  description: "A complex, roasty porter with a bittersweet, chocolate, and coffee taste and bold hop presence. A bittersweet tribute to the legendary freighter's fallen crew taken to soon when the gales of November came early",
   abv: 6, 
   ibu: 37
 })
@@ -185,7 +185,7 @@ greatLakesBeer1 = brewery3.beers.new({
 greatLakesBeer2 = brewery3.beers.new({
   name: "Chillwave Double IPA",
   style: "IPA - Imperial",
-  description: "Hop-forward with a balanced blend of Mosaic and Nugget hops.",
+  description: "Hop forward brew with a balanced blend of Mosaic and Nugget hops.",
   abv: 9,
   ibu: 80
 })
@@ -228,7 +228,7 @@ greatLakesBeer4.save!
 brewery4 = Brewery.new({
   name: 'Anchor Brewing Company',
   location: 'San Francisco, CA',
-  description: 'Brewing hand-crafted beer in the heart of San Francisco since 1896.'
+  description: 'Brewing hand crafted beer in the heart of San Francisco since 1896.'
 })
 
 breweryFile4 = open('https://retappd-heroku.s3-us-west-1.amazonaws.com/brewery-Anchor.jpg')
@@ -256,7 +256,7 @@ anchorBeer1 = brewery4.beers.new({
 anchorBeer2 = brewery4.beers.new({
   name: "Anchor Porter",
   style: "Porter - American",
-  description: "With deep black color, a thick, creamy head, rich chocolate, toffee and coffee flavors, and full-bodied smoothness, Anchor Porter is the epitome of a handcrafted dark beer. Anchor Porter became the first modern American porter when it was introduced in 1972. As we celebrate its 40th anniversary, our porter continues to reward those who look beyond its intimidating appearance to discover its smooth, full-bodied drinkability. Anchor Porter is the definitive American Porter.",
+  description: "With deep black color, a thick, creamy head, rich chocolate, toffee and coffee flavors, and full bodied smoothness, Anchor Porter is the epitome of a handcrafted dark beer. Anchor Porter became the first modern American porter when it was introduced in 1972. As we celebrate its 40th anniversary, our porter continues to reward those who look beyond its intimidating appearance to discover its smooth, full bodied drinkability. Anchor Porter is the definitive American Porter.",
   abv: 5.6, 
   ibu: 40
 })
@@ -272,7 +272,7 @@ anchorBeer3 = brewery4.beers.new({
 anchorBeer4 = brewery4.beers.new({
   name: "Anchor California Lager",
   style: "Lager - Pale",
-  description: "Made in San Francisco with two-row California barley, Cluster hops, and our own lager yeast, this all-malt brew is kräusened and lagered in our cellars. Its golden color, distinctive aroma, creamy head, balanced depth of flavor, and smooth finish make Anchor California Lager a delicious celebration of California’s unique craft brewing heritage.",
+  description: "Made in San Francisco with California barley, Cluster hops, and our own lager yeast, this malty brew is krausened and lagered in our cellars. Its golden color, distinctive aroma, creamy head, balanced depth of flavor, and smooth finish make Anchor California Lager a delicious celebration of California’s unique craft brewing heritage.",
   abv: 4.9, 
   ibu: 19
 })
@@ -311,7 +311,7 @@ brewery5.save!
 budBeer1 = brewery5.beers.new({
   name: "Bud Light",
   style: "Lager - American",
-  description: "Bud Light is brewed using a blend of premium aroma hop varieties, both American-grown and imported, and a combination of barley malts and rice. Its superior drinkability and refreshing flavor makes it the world’s favorite light beer.",
+  description: "Bud Light is brewed using a blend of premium aroma hop varieties, both local and imported, and a combination of barley malts and rice. Its superior drinkability and refreshing flavor makes it the world’s favorite light beer.",
   abv: 4.2,
   ibu: 6
 })
@@ -327,7 +327,7 @@ budBeer2 = brewery5.beers.new({
 budBeer3 = brewery5.beers.new({
   name: "Michelob ULTRA",
   style: "Lager - American Light",
-  description: "A superior light beer. Brewed using the finest barley malt, select grains, all-imported hops and a pure-cultured yeast strain.",
+  description: "A superior light beer. Brewed using the finest barley malt, select grains, all-imported hops and a pure yeast strain.",
   abv: 4.2,
   ibu: 10
 })
