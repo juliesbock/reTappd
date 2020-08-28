@@ -13,7 +13,7 @@ require 'open-uri';
 Brewery.destroy_all
 Beer.destroy_all
 
-brewery1 = Brewery.new({
+brewery1 = Brewery.create!({
   name: 'Prairie Artisan Ales',
   location: 'Krebs, OK',
   description: 'Welcome to the world of Prairie Artisan Ales. A company started by two brothers. We didn’t start it due to a lack of good beer, or whatever people like to say in this part of their website. We wanted to do something that was awesome. We have the talent, and most importantly the years of experience needed to get it done. So we did it. We have funded the company on our own, and only want to work with people that care about beer, super good beer. Our goal is to show people what is possible when you start with step one.'
@@ -21,14 +21,13 @@ brewery1 = Brewery.new({
 
 breweryFile1 = open('https://retappd-heroku.s3-us-west-1.amazonaws.com/prairie_logo.jpg')
 brewery1.photo.attach(io: breweryFile1, filename: 'prairie_logo.jpg')
-brewery1.save!
 
 # beers for brewery 1
 beer1 = brewery1.beers.create!({
   name: "Bomb!",
   style: "Stout - Imperial",
   description: "Bomb! is an imperial stout aged on Nordaggio's espresso beans, chocolate, vanilla beans, and ancho chile peppers. All the flavors meld to create a truly unique beer. The peppers add just the right amount of heat to complement the intense coffee and chocolate flavors.",
-  abv: 13.0,
+  abv: 13.0
 })
 
 beer2 = brewery1.beers.create!({
@@ -66,7 +65,7 @@ beer6 = brewery1.beers.create!({
   name:  'Vape Tricks',
   style: 'Sour - Fruited',
   description: 'Sour ale aged on cherries.',
-  abv: 5.9,
+  abv: 5.9
 })
 
 beerFile1 = open('https://retappd-heroku.s3-us-west-1.amazonaws.com/bomb.jpeg')
@@ -85,7 +84,7 @@ beer6.photo.attach(io: beerFile6, filename: 'vapetrix.jpg')
 
 
 ## brewery2
-brewery2 = Brewery.new({
+brewery2 = Brewery.create!({
   name: 'Russian River Brewing Company',
   location: 'Windsor, CA',
   description: "Russian River Brewing Company was originally owned by Korbel Champagne Cellars in Guerneville, California and was founded on their historic and beautiful property amidst vineyards and redwoods near the Russian River. When Korbel decided to get out of the beer business in 2003, they generously offered the brewmaster, Vinnie Cilurzo and his wife Natalie the rights to the brand. Russian River Brewing might be something completely different now if it weren't for this incredible opportunity. The history of Russian River Brewing Company would be incomplete without a little background on the people who own it, operate it, and are passionate about their brewery and craft beer in general! "
@@ -93,7 +92,6 @@ brewery2 = Brewery.new({
 
 breweryFile2 = open('https://retappd-heroku.s3-us-west-1.amazonaws.com/brewery-rr.jpg')
 brewery2.photo.attach(io: breweryFile2, filename: 'brewery-rr.jpg')
-brewery2.save!
 
 #beers for brewery2
 rrBeer1 = brewery2.beers.new({
@@ -155,7 +153,7 @@ rrBeer4.save!
 rrBeer5.save!
 
 ## brewery3
-brewery3 = Brewery.new({
+brewery3 = Brewery.create!({
   name: 'Great Lakes Brewing Company',
   location: 'Cleveland, OH',
   description: 'Great Lakes Brewing Company (GLBC) was founded in 1988 by brothers Patrick and Daniel Conway in Cleveland, Ohio. Independent and employee owned, GLBC is known for its award winning portfolio of fresh, balanced, and flavorful beers with names and artwork that tell stories of the Great Lakes region. Since its founding, GLBC has remained a principle centered brewery with a “triple bottom line” philosophy, balancing financial responsibility with social and environmental responsibility.'
@@ -163,7 +161,6 @@ brewery3 = Brewery.new({
 
 breweryFile3 = open('https://retappd-heroku.s3-us-west-1.amazonaws.com/brewery-glbc.jpg')
 brewery3.photo.attach(io: breweryFile3, filename: 'brewery-glbc.jpg')
-brewery3.save!
 
 #beers for brewery3
 greatLakesBeer0 = brewery3.beers.new({
@@ -225,7 +222,7 @@ greatLakesBeer3.save!
 greatLakesBeer4.save!
 
 ##brewery 4
-brewery4 = Brewery.new({
+brewery4 = Brewery.create!({
   name: 'Anchor Brewing Company',
   location: 'San Francisco, CA',
   description: 'Brewing hand crafted beer in the heart of San Francisco since 1896.'
@@ -233,7 +230,6 @@ brewery4 = Brewery.new({
 
 breweryFile4 = open('https://retappd-heroku.s3-us-west-1.amazonaws.com/brewery-Anchor.jpg')
 brewery4.photo.attach(io: breweryFile4, filename: 'brewery-Anchor.jpg')
-brewery4.save!
 
 
 #Beers for brewery4
@@ -297,7 +293,7 @@ anchorBeer4.save!
 
 
 ##Budwiser brewery
-brewery5 = Brewery.new({
+brewery5 = Brewery.create!({
   name: 'Anheuser-Busch',
   location: 'St. Louis, MO',
   description: 'The leading American brewer, bringing people together for more than 160 years.'
@@ -305,7 +301,6 @@ brewery5 = Brewery.new({
 
 breweryFile5 = open('https://retappd-heroku.s3-us-west-1.amazonaws.com/bud-brewery.png')
 brewery5.photo.attach(io: breweryFile5, filename: 'bud-brewery.jpg')
-brewery5.save!
 
 #bud's beers
 budBeer1 = brewery5.beers.new({
