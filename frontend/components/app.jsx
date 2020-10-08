@@ -12,7 +12,6 @@ import BreweryIndex from './breweries/brewery_index'
 // import CheckinIndex from './checkins/checkin_index'
 // <Route path="/checkins" component={CheckinIndex}/> //
 
-
 const App = () => (
   <div className="body">
     <Switch>
@@ -22,7 +21,7 @@ const App = () => (
       <ProtectedRoute path="/beers/:beerId" component={BeerShow} />
       <AuthRoute path="/signup" component={SignupContainer} />
       <AuthRoute path="/login" component={LoginContainer} />
-      <Route path="/" component={SplashPage} />
+      <AuthRoute path="/" component={SplashPage} />
     </Switch>
   </div>
 );
