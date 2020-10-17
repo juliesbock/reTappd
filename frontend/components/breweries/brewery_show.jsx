@@ -27,7 +27,6 @@ const mSTP = ({entities}, ownProps) => {
 }
 
 const mDTP = dispatch => {
-  debugger
   return {
     fetchBrewery: (breweryId) => dispatch(fetchBrewery(breweryId)),
     fetchBeers: () => dispatch(fetchBeers())
