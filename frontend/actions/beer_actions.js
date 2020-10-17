@@ -18,11 +18,12 @@ const receiveErrors = errors => ({
   errors
 });
 
-export const fetchBeers = () => dispatch => (
-  APIUtil.fetchBeers()
+export const fetchBeers = () => dispatch => {
+  // debugger
+  return APIUtil.fetchBeers()
     .then((beers) => dispatch(receiveAllBeers(beers)))
     .fail((errors) => dispatch(receiveErrors(errors.responseJSON)))
-);
+};
 
 export const fetchBeer = beer => dispatch => (
   APIUtil.fetchBeer(beer)

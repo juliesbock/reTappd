@@ -174,7 +174,7 @@ greatLakesBeer0 = brewery3.beers.new({
 greatLakesBeer1 = brewery3.beers.new({
   name: "Edmund Fitzgerald",
   style: "Porter - American",
-  description: "A complex, roasty porter with a bittersweet, chocolate, and coffee taste and bold hop presence. A bittersweet tribute to the legendary freighter's fallen crew taken to soon when the gales of November came early",
+  description: "A complex, roasty porter with a bittersweet, chocolate, and coffee taste and bold hop presence. A bittersweet tribute to the legendary freighter's fallen crew taken to soon when the gales of November came early.",
   abv: 6, 
   ibu: 37
 })

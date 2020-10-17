@@ -3,17 +3,34 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { fetchBrewery } from '../../actions/brewery_actions';
+import { fetchBeers } from '../../actions/beer_actions';
 
+
+
+
+// const mapStateToProps = state => ({
+//   checkins: Object.values(state.entities.checkins),
+//   users: state.entities.users,
+//   beverages: state.entities.beverages,
+//   breweries: state.entities.breweries,
+//   currentUserId: state.session.id
+// })
 
 const mSTP = ({entities}, ownProps) => {
+  console.log(entities)
   return {
+    beers: entities,
     brewery: entities.breweries[ownProps.match.params.breweryId]
+    // beers: entities.beers
+    // beers: Object.values(state.entities.beers)
   }
 }
 
 const mDTP = dispatch => {
+  debugger
   return {
-    fetchBrewery: (breweryId) => dispatch(fetchBrewery(breweryId))
+    fetchBrewery: (breweryId) => dispatch(fetchBrewery(breweryId)),
+    fetchBeers: () => dispatch(fetchBeers())
   }
 }
 
@@ -29,6 +46,10 @@ class BreweryShow extends React.Component{
   render(){
     if (this.props.brewery === undefined) return 'no brewery here';
     let brewery = this.props.brewery;
+    let beers = this.props.brewery.beers;
+    console.log(beers)
+    // let beers = this.props.beers;
+    // let beers = entities.breweries[12].beers
     window.scrollTo(0, 0)
 
     return(
@@ -57,7 +78,8 @@ class BreweryShow extends React.Component{
             </div>
           </div>
           <div>
-            {/* <h1>show beers</h1> */}
+
+            {/* <h1>{beers}</h1> */}
           </div>
         </div>
       </div>
