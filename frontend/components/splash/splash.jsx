@@ -60,12 +60,12 @@ class Splash extends React.Component {
           </section>
           <section className='map-feature'>
             <div className='map-feature-img'>
-              <img src={window.featureImg5} alt="" />
+              <img src="https://untappd.akamaized.net/assets/custom/homepage/images/phone-map.png" alt="" />
             </div>
             <div className='map-feature-text'>
               <h1 className='map-feature-heading'>Explore nearby popular bars, breweries, and beers</h1>
               <div className='map-short-bar'></div>
-              <p className='map-feature-body'>Not sure where to grab a pint? Untappd shows you popular bars and venues nearby and what’s on tap.</p>
+              <p className='map-feature-body'>Not sure where to grab a pint? Retappd shows you popular bars and venues nearby and what’s on tap.</p>
             </div>
           </section>
           <section className='other-features'>
@@ -85,7 +85,7 @@ class Splash extends React.Component {
               <div className='other-features-items'>
                 <img src="https://untappd.akamaized.net/assets/custom/homepage/images/icon-events.svg" alt="" />
                 <h2 className='other-item-title'>Local Events</h2>
-                <div className='other-item-body'>Stay up-to-date with venue and brewery events alerts.</div>
+                <div className='other-item-body'>Stay up-to-date with local breweries event alerts.</div>
               </div>
             </div>
           </section>
@@ -96,7 +96,7 @@ class Splash extends React.Component {
               <a className='footer-link' target='_blank' href='https://juliesbock.github.io' >Personal Site</a>
             </div>
             <div>
-              <p className='footer-tag'>Retappd 2020</p>
+              <p className='footer-tag'>reTappd 2020</p>
             </div>
           </div>
           

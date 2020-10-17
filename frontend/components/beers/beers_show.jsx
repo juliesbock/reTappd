@@ -10,7 +10,6 @@ class BeerShow extends React.Component {
   componentDidMount() {
     this.props.fetchBeer(this.props.match.params.beerId);
     this.props.fetchBreweries();
-    // debugger;
   }
 
   componentDidUpdate(prevProps) {

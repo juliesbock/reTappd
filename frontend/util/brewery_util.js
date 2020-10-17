@@ -1,6 +1,5 @@
 //show
 export const fetchBrewery = brewId => {
-  // debugger
   return $.ajax({
     method: `GET`,
     url: `/api/breweries/${brewId}`
